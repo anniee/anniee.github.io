@@ -18,6 +18,17 @@ border-bottom: 2px solid #f9ecf2;
 padding-bottom: 20px;
 }
 
+p, li {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  padding: 10px 40px;
+}
+
+#projects-title {
+  border-bottom: 2px solid #f9ecf2;
+  padding-bottom: 20px;
+}
+
 img {
   border-radius: 200px;
   display: block;
@@ -50,4 +61,69 @@ img {
   color: #ffb3d9;
   font-weight: bold;
   background-color: black;
+}
+
+/* EVERY MODERN WEBSITE NEEDS AT LEAST ONE BUG */
+
+@keyframes cockroach {
+    0%   {left:400px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:-200px;}
+    75%  {left:0px; top:0px;}
+    100% {left:400px; top:0px;}
+}
+.cockroach {
+/*  position: absolute;
+  width:100px;
+  height: 100px;*/
+}
+.cockroach img {
+    width: 100px;
+    height: 100px;
+    left: 400px;
+    position: relative;
+    animation-name: cockroach;
+    animation-duration: 4s;
+}
+
+/* PROJECTS */
+#projects-list {
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  list-style-type: none;
+}
+
+/*use this for publications, do more robust dropdown toggle for projects*/
+#project-info--bitzbots {
+  display: none;
+}
+
+li:hover + #project-info--bitzbots {
+    display: block;
+}
+
+
+/* PUBLICATIONS */
+#publications-info--paper1 {
+  display: none;
+}
+
+li:hover + #publications-info--paper1 {
+    display: block;
+}
+
+
+/* ABOUT */
+#email-link {
+  color: black;
+}
+
+#email-link:hover {
+  background-color: #f9ecf2;
+  font-weight: bold;
+}
+
+li:hover + #project-info--bitzbots {
+    display: block;
 }
