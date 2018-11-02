@@ -24,6 +24,14 @@ p, li {
   padding: 10px 40px;
 }
 
+button {
+  font-family: 'Roboto Mono', monospace;
+  padding: 20px;
+  font-size: 40px;
+  background-color: #ecc6d9;
+  border: 5px dotted white
+}
+
 #projects-title {
   border-bottom: 2px solid #f9ecf2;
   padding-bottom: 20px;
@@ -94,15 +102,6 @@ img {
   list-style-type: none;
 }
 
-/*use this for publications, do more robust dropdown toggle for projects*/
-#project-info--bitzbots {
-  display: none;
-}
-
-li:hover + #project-info--bitzbots {
-    display: block;
-}
-
 
 /* PUBLICATIONS */
 #publications-info--paper1 {
@@ -124,6 +123,6 @@ li:hover + #publications-info--paper1 {
   font-weight: bold;
 }
 
-li:hover + #project-info--bitzbots {
+/*li:hover + #project-info--bitzbots {
     display: block;
-}
+}*/

@@ -12,10 +12,21 @@
       <h1 id="projects-title">Projects</h1>
     </div>
     <ul id="projects-list">
-      <li>BitzBots</li>
-      <div id="project-info--bitzbots">lala</div>
-      <li>Angelena Atlas</li>
-      <li>postscripta</li>
+      <li><button onclick="toggleProject('project-info--bitzbots')">BitzBots</button></li>
+      <div id="project-info--bitzbots" style="display:none;">
+        <video width="600" height="340" controls>
+          <source src="images/bitzbots2018.mp4" type="video/mp4">
+          Video of BitzBots web app.
+        </video>
+      </div>
+      <li><button>Angelena Atlas</button></li>
+      <li><button>postscripta</button></li>
     </ul>
+    <script>
+      function toggleProject(id) {
+        var project = document.getElementById(id);
+        project.style.display = project.style.display === 'none' ? 'block' : 'none';
+      }
+    </script>
   </body>
 </html>
