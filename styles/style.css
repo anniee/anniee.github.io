@@ -29,8 +29,15 @@ button {
   padding: 20px;
   font-size: 40px;
   background-color: #ecc6d9;
-  border: 5px dotted white
+  border: 5px solid #f9ecf2;
 }
+
+button:hover {
+  cursor: pointer;
+  background-color: #f9ecf2 ;
+  border: 5px solid #ecc6d9;
+}
+
 
 #projects-title {
   border-bottom: 2px solid #f9ecf2;
@@ -69,6 +76,19 @@ img {
   color: #ffb3d9;
   font-weight: bold;
   background-color: black;
+}
+
+.media-link-container {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.media-link-container a {
+  color: #f9ecf2;
+}
+
+.media-link-container a:hover {
+  background-color: #f9ecf2;
+  color: black;
 }
 
 /* EVERY MODERN WEBSITE NEEDS AT LEAST ONE BUG */
