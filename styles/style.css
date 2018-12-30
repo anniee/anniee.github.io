@@ -1,47 +1,61 @@
-html {
-  background-color: #ecc6d9;
+:focus {
+  outline: #dec6ec auto 6px;
 }
 
 h1 {
-  font-family: 'Shrikhand', cursive;
+  font-family: 'Viga', monospace;
   font-size: 60px;
   margin-bottom: 0px;
   text-align: center;
+  font-weight: 400;
 }
 h3 {
-/*font-family: 'Didact Gothic', sans-serif;*/
-font-weight: 500;
-text-align: center;
-margin-top: 0px;
-font-family: 'Roboto Mono', monospace;
-border-bottom: 2px solid #f9ecf2;
-padding-bottom: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0px;
+  font-family: monospace;
 }
 
 p, li {
-  font-family: 'Roboto Mono', monospace;
+  font-family: monospace;
   font-weight: 500;
   padding: 10px 40px;
 }
 
+.header {
+  padding-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-name {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  display: inline-block;
+}
+
 button {
-  font-family: 'Roboto Mono', monospace;
-  padding: 20px;
+  width:36%;
+  text-align: left;
+  font-family: monospace;
   font-size: 40px;
-  background-color: #ecc6d9;
-  border: 5px solid #f9ecf2;
+  color: #ece2c6;
+  background-color: #000000;
+  border: none;
 }
 
 button:hover {
   cursor: pointer;
+  color: #000000;
   background-color: #f9ecf2 ;
-  border: 5px solid #ecc6d9;
+  /* border: 5px solid #ecc6c6; */
 }
 
-
 #projects-title {
-  border-bottom: 2px solid #f9ecf2;
-  padding-bottom: 20px;
+  display: inline-block;
 }
 
 img {
@@ -60,7 +74,7 @@ img {
   position: absolute;
   top: 47%;
   left: 47%;
-  font-family: 'Roboto Mono', monospace;
+  font-family: monospace;
   font-size: 18px;
   text-align: end;
 }
@@ -73,22 +87,22 @@ img {
 }
 
 .portfolio-link:hover, .portfolio-link:focus {
-  color: #ffb3d9;
+  color: #ece2c6;
   font-weight: bold;
   background-color: black;
 }
 
 .media-link-container {
-  font-family: 'Roboto Mono', monospace;
+  font-family: monospace;
+  margin-left: 20%;
 }
 
 .media-link-container a {
-  color: #f9ecf2;
+  color: black;
 }
 
 .media-link-container a:hover {
   background-color: #f9ecf2;
-  color: black;
 }
 
 /* EVERY MODERN WEBSITE NEEDS AT LEAST ONE BUG */
@@ -116,9 +130,10 @@ img {
 
 /* PROJECTS */
 #projects-list {
+  padding-left: 20%;
   font-weight: 500;
-  text-align: center;
-  font-family: 'Roboto Mono', monospace;
+  /* text-align: center; */
+  font-family: monospace;
   list-style-type: none;
 }
 
