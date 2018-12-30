@@ -139,14 +139,38 @@ img {
 
 
 /* PUBLICATIONS */
-#publications-info--paper1 {
+.paper-title a {
+  text-decoration: none;
+  color: #000000
+}
+
+.paper-title a:hover {
+  text-decoration: underline;
+}
+
+#publications-info-paper1, 
+#publications-info-paper2,
+#publications-info-paper3 {
   display: none;
 }
 
-li:hover + #publications-info--paper1 {
+li:hover + #publications-info-paper1 {
     display: block;
 }
 
+li:hover + #publications-info-paper2 {
+  display: block;
+}
+
+li:hover + #publications-info-paper3 {
+  display: block;
+}
+
+.paper-info {
+  background-color: #000000;
+  color:#ece2c6;
+  font-family: monospace;
+}
 
 /* ABOUT */
 #email-link {
