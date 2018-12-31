@@ -140,6 +140,10 @@ img {
   margin: 20px 60px 20px 0;
 }
 
+#angelena-atlas {
+  width: 35%;
+}
+
 /* PUBLICATIONS */
 .paper-title a {
   text-decoration: none;
