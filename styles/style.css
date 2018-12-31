@@ -183,6 +183,13 @@ li:hover + #publications-info-paper3 {
   font-family: monospace;
 }
 
+/* EXHIBITIONS */
+#maker-faire-booth {
+  width: 50%;
+  border-radius: 0;
+  margin: 20px 0 20px 0;
+}
+
 /* ABOUT */
 #email-link {
   color: black;
