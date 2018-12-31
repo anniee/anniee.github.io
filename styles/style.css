@@ -144,6 +144,11 @@ img {
   width: 35%;
 }
 
+.the_bugging_img {
+  width: 35%;
+  border-radius: 0;
+}
+
 /* PUBLICATIONS */
 .paper-title a {
   text-decoration: none;
