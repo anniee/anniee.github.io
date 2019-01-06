@@ -9,39 +9,93 @@
     </head>
     <body>
         <h1>Magic Neural Net</h1>
-        <h3>Looking for answers? Let a neural net lend you advice.</h3>
+        <h3>Looking for answers? Allow a neural net to lend you advice.</h3>
         <h3>Ask your question and click the 8-ball.</h3>
-        <svg id="magicNeuralNet" height="300" width="300" style="margin: 5% 0 0 35%;" onclick="shakeBall()">
-            <circle cx="50%" cy="50%" r="140" stroke="black" stroke-width="3" fill="black" />
-            <circle class="magicDefault" style="display: block;" cx="50%" cy="50%" r="100" stroke="white" stroke-width="2" fill="white" />
-            <text class="magicDefault" style="display: block;" x="46%" y="54%" fill="black" style="font-size: 56px; font-family: 'Exo', sans-serif;">8</text>
-            <!-- <circle style="display: none" cx="50%" cy="50%" r="100" stroke="gray" stroke-width="2" fill="black" /> -->
-            <!-- <circle style="display: none" cx="50%" cy="50%" r="90" stroke="gray" stroke-width="3" fill="#1c2635" /> -->
+        <svg id="magicNeuralNet" height="500" width="500" style="margin: 5% 0 0 30%;" onclick="shakeBall()">
+            <circle cx="50%" cy="50%" r="220" stroke="black" stroke-width="3" fill="black" />
+            <circle class="magicDefault" style="display: block;" cx="50%" cy="50%" r="125" stroke="white" stroke-width="2" fill="white" />
+            <text class="magicDefault" style="display: block; font-size: 70px; font-family: 'Exo', sans-serif;" x="46%" y="54%" fill="black">8</text>
         </svg>
-        <svg id="magicNeuralNetAnswer" height="300" width="300" style="margin: 5% 0 0 35%;" onclick="shakeBall()">
-                <circle cx="50%" cy="50%" r="140" stroke="black" stroke-width="3" fill="black" />
-                <circle style="display: none" cx="50%" cy="50%" r="100" stroke="gray" stroke-width="2" fill="black" />
-                <circle style="display: none" cx="50%" cy="50%" r="90" stroke="gray" stroke-width="3" fill="#1c2635" />
-                <defs>
-                <path class="magicShook" id="magicTriangle"
-                    d="M 1 1 L 100 1 L 50 100 z"
-                    fill="blue" 
-                    stroke="black" 
-                    stroke-width="3" />
-                </defs>
-                <use x="33%" y="33%" xlink:href="#magicTriangle"/>
-                <text class="magicShook" id="magicAnswer" x="50%" y="50%" fill="white" font-size="12">hello</text>
-            </svg>
+        <svg id="magicNeuralNetAnswer" style="display: none; margin: 5% 0 0 30%;" height="500" width="500" onclick="shakeBall()">
+            <circle cx="50%" cy="50%" r="220" stroke="black" stroke-width="3" fill="black" />
+            <circle cx="50%" cy="50%" r="150" stroke="gray" stroke-width="2" fill="black" />
+            <circle cx="50%" cy="50%" r="140" stroke="gray" stroke-width="3" fill="#1c2635" />
+            <defs>
+            <path class="magicShook" id="magicTriangle"
+                d="M 1 1 L 200 1 L 100 200 z"
+                fill="blue" 
+                stroke="black" 
+                stroke-width="3" />
+            </defs>
+            <use x="30%" y="33%" xlink:href="#magicTriangle"/>
+            <text class="magicShook" id="magicAnswer" x="38%" y="40%" fill="white" style="font-size: 14px; font-family: 'Exo', sans-serif;">Yes.</text>
+        </svg>
+        <h3>Powered by <a href="https://github.com/cazala/synaptic" target="_blank" rel="noopener noreferrer">Synaptic</a></h3>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.1.4/synaptic.js"></script>
         <script>
+            let yourFortune;
+            const randomInputArr = [0,1];
+
+            const goodFortune = ['It is certain.', 'It is decidedly so.', 'Without a doubt.', 'Yes - definitely.', 'You may rely on it.',
+            'As I see it, yes.', 'Most likely.', 'Outlook good.', 'Yes.', 'Signs point to yes.'];
+            const badFortune = ['Don\'t count on it.', 'My reply is no.', 'My sources say no.', 'Outlook not so good.', 'Very doubtful.'];
+            const edgeCaseFortune = ['Reply hazy, try again.', 'Ask again later.', 'Better not tell you now.', 'Cannot predict now.', 'Concentrate and ask again.'];
+            
             function shakeBall() {
+                let defaultBall = document.getElementById('magicNeuralNet');
+                defaultBall.style.display = defaultBall.style.display != 'none' ? 'none' : 'block';
 
-                var defaultBall = document.getElementById('magicNeuralNet');
-                defaultBall.style.display = 'none';
+                let shookBall = document.getElementById('magicNeuralNetAnswer');
+                let yourFortune = generateFortune();
+                let yourMagicAnswer = document.getElementById('magicAnswer');
+                yourMagicAnswer.innerHTML = yourFortune;
+                shookBall.style.display = shookBall.style.display === 'none' ? 'block' : 'none';
+            }
 
-                var shookBall = document.getElementById('magicNeuralNetAnswer');
-                magicNeuralNetAnswer.style.display = 'block';
+            // create the neural network
+            let Layer = synaptic.Layer, Network = synaptic.Network;
+            let inputLayer = new Layer(2);
+            let hiddenLayer = new Layer(3);
+            let outputLayer = new Layer(1);
 
-                // project.style.display = project.style.display === 'none' ? 'block' : 'none';
+            inputLayer.project(hiddenLayer);
+            hiddenLayer.project(outputLayer);
+            let myNetwork = new Network({
+            input: inputLayer,
+            hidden: [hiddenLayer],
+            output: outputLayer
+            });
+
+            // train the network to learn XOR, yields close to 1 if input differs
+            let learningRate = .3;
+            for (let i = 0; i < 20000; i++) {
+                // 0,0 => 0
+                myNetwork.activate([0,0]);
+                myNetwork.propagate(learningRate, [0]);
+                // 0,1 => 1
+                myNetwork.activate([0,1]);
+                myNetwork.propagate(learningRate, [1]);
+                // 1,0 => 1
+                myNetwork.activate([1,0]);
+                myNetwork.propagate(learningRate, [1]);
+                // 1,1 => 0
+                myNetwork.activate([1,1]);
+                myNetwork.propagate(learningRate, [0]);
+            }            
+
+            function generateFortune() {
+                // pseudorandomly choose inputs, any possible combinaton of 0 and 1
+                let inputOne = randomInputArr[Math.floor(randomInputArr.length * Math.random())];
+                let inputTwo = randomInputArr[Math.floor(randomInputArr.length * Math.random())];
+                // activate neural net with random inputs
+                // if inputs differ and network yields close to 1, receive good fortune, vice versa
+                if (myNetwork.activate([inputOne, inputTwo])[0] >= 0.9) {
+                    return goodFortune[Math.floor(goodFortune.length * Math.random())];
+                } else if (myNetwork.activate([inputOne, inputTwo])[0] <= 0.9) {
+                    return badFortune[Math.floor(badFortune.length * Math.random())];
+                } else {
+                    return edgeCaseFortune[Math.floor(edgeCaseFortune.length * Math.random())];
+                }
             }
         </script>
     </body>

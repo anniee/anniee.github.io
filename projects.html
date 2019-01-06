@@ -70,6 +70,28 @@
         <div class="project-info">
             Original Tech Stack: Angular, HTML, CSS, Python, Flask. The handwriting sampled is my dad's own since developing MS, the unique characteristics of which demonstrate the resilience of the human nervous system.</div>
         </div>
+      </div>
+      <li><button onclick="toggleProject('project-info--magic_net')">Magic Neural Net</button></li>
+      <div id="project-info--magic_net" style="display:none;">
+        <div class="project-info">
+          <a href="magic_neural_net.html" target="_blank" rel="noopener noreferrer">Magic Neural Net</a> is a simple, JavaScript composed neural network acting as a Magic 8-Ball to lend
+          pseudo-random, yet by definition 'intelligent', fortunes. The net utilizes a random input of combinations involving 0 and/or 1 to solve the XOR equation, which is used to determine whether 
+          two inputs differ. Interestingly, the classic Magic 8-Ball already has 'edge case' fortunes built in, which are used as fallback answers in case the code
+          encounters a runtime issue. 
+        </div>
+        <div class="project-info">
+          If the inputs differ, the network yields an output close to 1, which I mapped to yield a binary result of good (closer to 1) or bad fortune (closer to 0).
+          This is a playful exercise in training a neural network and applying sophisticated, intelligent code to a basically meaningless end, mimicking a Magic 8-Ball, which does not actually use
+          input about your situation to intelligently predict fortune. 
+        </div>
+        <video width="600" height="340" controls>
+          <source src="images/magic_neural_net.mp4" type="video/mp4">
+          Video of a neural network acting as magic 8-ball
+        </video>
+        <div class="project-info">
+          Tech Stack: JavaScript and <a href="https://github.com/cazala/synaptic" target="_blank" rel="noopener noreferrer">Synaptic</a>
+        </div>
+      </div>
       <li><button onclick="toggleProject('project-info--thebugging')">the_bugging</button></li>
       <div id="project-info--thebugging" style="display:none;">
         <img src="images/sitemigbugging1.png" class="the_bugging_img" alt="digital bugs">
