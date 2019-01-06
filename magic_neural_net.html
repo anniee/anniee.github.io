@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Anne Vetto</title>
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Magic Neural Net</h1>
+        <h3>Looking for answers? Let a neural net lend you advice.</h3>
+        <h3>Ask your question and click the 8-ball.</h3>
+        <svg id="magicNeuralNet" height="300" width="300" style="margin: 5% 0 0 35%;" onclick="shakeBall()">
+            <circle cx="50%" cy="50%" r="140" stroke="black" stroke-width="3" fill="black" />
+            <circle class="magicDefault" style="display: block;" cx="50%" cy="50%" r="100" stroke="white" stroke-width="2" fill="white" />
+            <text class="magicDefault" style="display: block;" x="46%" y="54%" fill="black" style="font-size: 56px; font-family: 'Exo', sans-serif;">8</text>
+            <!-- <circle style="display: none" cx="50%" cy="50%" r="100" stroke="gray" stroke-width="2" fill="black" /> -->
+            <!-- <circle style="display: none" cx="50%" cy="50%" r="90" stroke="gray" stroke-width="3" fill="#1c2635" /> -->
+        </svg>
+        <svg id="magicNeuralNetAnswer" height="300" width="300" style="margin: 5% 0 0 35%;" onclick="shakeBall()">
+                <circle cx="50%" cy="50%" r="140" stroke="black" stroke-width="3" fill="black" />
+                <circle style="display: none" cx="50%" cy="50%" r="100" stroke="gray" stroke-width="2" fill="black" />
+                <circle style="display: none" cx="50%" cy="50%" r="90" stroke="gray" stroke-width="3" fill="#1c2635" />
+                <defs>
+                <path class="magicShook" id="magicTriangle"
+                    d="M 1 1 L 100 1 L 50 100 z"
+                    fill="blue" 
+                    stroke="black" 
+                    stroke-width="3" />
+                </defs>
+                <use x="33%" y="33%" xlink:href="#magicTriangle"/>
+                <text class="magicShook" id="magicAnswer" x="50%" y="50%" fill="white" font-size="12">hello</text>
+            </svg>
+        <script>
+            function shakeBall() {
+
+                var defaultBall = document.getElementById('magicNeuralNet');
+                defaultBall.style.display = 'none';
+
+                var shookBall = document.getElementById('magicNeuralNetAnswer');
+                magicNeuralNetAnswer.style.display = 'block';
+
+                // project.style.display = project.style.display === 'none' ? 'block' : 'none';
+            }
+        </script>
+    </body>
+</html>

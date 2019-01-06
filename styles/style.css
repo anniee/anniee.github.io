@@ -149,6 +149,10 @@ img {
   border-radius: 0;
 }
 
+#magicNeuralNet:hover {
+  cursor: pointer;
+}
+
 /* PUBLICATIONS */
 .paper-title a {
   text-decoration: none;

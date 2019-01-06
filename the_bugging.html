@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Canvas tutorial</title>
+    <script type="text/javascript">
+      function draw() {
+				var bugColorsArr = [ "orchid", "goldenrod", "lightgrey", "thistle", "rosybrown", "mediumorchid", "darkkhaki", "greenyellow", "mediumvioletred","indianred", "peru", "chocolate", "palegreen", "tan", "darkgoldenrod", "palevioletred", "red", "lightcyan" ];
+				var bugBack1 = bugColorsArr[Math.floor(bugColorsArr.length * Math.random())];
+				var bugBack2 = bugColorsArr[Math.floor(bugColorsArr.length * Math.random())];
+				var bugBack3 = bugColorsArr[Math.floor(bugColorsArr.length * Math.random())];
+				var bugAccent = bugColorsArr[Math.floor(bugColorsArr.length * Math.random())];
+				var bugHead = bugColorsArr[Math.floor(bugColorsArr.length * Math.random())];
+				var bugButt = bugColorsArr[Math.floor(bugColorsArr.length * Math.random())];
+				var canvas = document.getElementById('the_bugging_canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+						// Class for parent1 bug
+
+						// BACK
+						var gradient = ctx.createLinearGradient(200, 100, 250, 175);
+						gradient.addColorStop("0", bugBack1);
+						gradient.addColorStop("0.5", bugBack2);
+						gradient.addColorStop("1.0", bugBack3);
+
+						// Fill with gradient
+						ctx.strokeStyle = gradient;
+						ctx.fillStyle = gradient;
+						ctx.strokeRect(200, 100, 50, 75);
+						ctx.fillRect(200, 100, 50, 75);
+
+						// STRIPES
+						// ctx.strokeStyle = bugAccent;
+						// ctx.strokeRect(200, 150, 50, 10);
+						// ctx.strokeRect(200, 130, 50, 10);
+						// ctx.strokeRect(200, 140, 50, 5);
+
+						// HEAD
+						ctx.fillStyle = bugHead;
+						ctx.beginPath();
+						ctx.arc(225, 100, 25, 0, Math.PI, true);
+						ctx.fill();
+
+						// CURVED ANTENNAE
+						ctx.strokeStyle = bugAccent;
+						ctx.lineWidth = 3;
+						ctx.beginPath();
+						ctx.moveTo(210, 80);
+						ctx.quadraticCurveTo(210, 40, 180, 70);
+						ctx.moveTo(240, 80);
+						ctx.quadraticCurveTo(240, 40, 270, 70);
+						ctx.stroke();
+
+						// BUTT
+						ctx.fillStyle = bugButt;
+						ctx.beginPath();
+						ctx.arc(225, 175, 25, 0, Math.PI, false);
+						ctx.fill();
+
+						// SPOTS
+						ctx.fillStyle = bugAccent;
+						ctx.lineWidth = 2
+						ctx.beginPath();
+						// ctx.strokeStyle = 'red';
+						ctx.moveTo(220, 170);
+						ctx.arc(215, 170, 5, 0, Math.PI * 2, true);  // Left eye
+						ctx.moveTo(95, 65);
+						ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+						ctx.fill();
+        }
+      }
+    </script>
+    <style type="text/css">
+      canvas { border: 1px solid black; margin: 20px; background-color: black;}
+    </style>
+  </head>
+  <body onload="draw();">
+    <canvas id="the_bugging_canvas" width="800" height="600"></canvas>
+  </body>
+</html>
