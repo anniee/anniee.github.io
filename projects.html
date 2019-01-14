@@ -79,15 +79,16 @@
           two inputs differ. Interestingly, the classic Magic 8-Ball already has 'edge case' fortunes built in, which are used as fallback answers in case the code
           encounters a runtime issue. 
         </div>
+        <video width="600" height="340" controls>
+            <source src="images/magic_neural_net.mp4" type="video/mp4">
+            Video of a neural network acting as magic 8-ball
+          </video>
         <div class="project-info">
           If the inputs differ, the network yields an output close to 1, which I mapped to yield a binary result of good (closer to 1) or bad fortune (closer to 0).
           This is a playful exercise in training a neural network and applying sophisticated, intelligent code to a basically meaningless end, mimicking a Magic 8-Ball, which does not actually use
           input about your situation to intelligently predict fortune. 
         </div>
-        <video width="600" height="340" controls>
-          <source src="images/magic_neural_net.mp4" type="video/mp4">
-          Video of a neural network acting as magic 8-ball
-        </video>
+        <img src="images/magic_neural_net_code.png" id="neural_net_code" alt="neural net code">
         <div class="project-info">
           Tech Stack: JavaScript and <a href="https://github.com/cazala/synaptic" target="_blank" rel="noopener noreferrer">Synaptic</a>
         </div>
