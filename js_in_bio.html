@@ -1,28 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
-        // Using Hardy-Weinberg principle
-        // homozygotes
-        var a1a1 = 0.15;
-        var a2a2 = 0.35;
-        // heterozygote
-        var a1a2 = 1 - (a1a1 + a2a2);
-
-        // calc allele frequencies
-        var p = a1a1 + (a1a2 / 2);
-        var q = 1 - p;
-
-        console.log('generation 0:', a1a1, a1a2, a2a2);
-
-        // 2nd generation
-        a1a1 = p * p;
-        a1a2 = 2 * p * q;
-        a2a2 = q * q;
-
-        console.log('generation 1:', a1a1, a1a2, a2a2);
-    </script>
+    <style type="text/css">
+        canvas { border: 1px solid black; margin: 20px; background-color: black;}
+    </style>
   </head>
-  <body>
+  <body onload="makeParentBugs()">
+    <button onclick="createNextGen()">create next gen</button>
+    <canvas id="the_bugging_canvas" width="800" height="600"></canvas>
+    <script src="scripts/the_bugging.js"></script>
   </body>
 </html>
