@@ -11,23 +11,55 @@ var q = 1 - p;
 
 console.log('generation 0:', a1a1, a1a2, a2a2);
 
-function createNextGen() {
+function makeTheNextGen() {
+    console.log('make the next gen called'); 
+
+    var checkedValue = []; 
+    var inputs = document.getElementById("nextGenForm").elements;
+    for(var i=0; inputs[i]; ++i){
+          if(inputs[i].checked){
+               checkedValue.push(inputs[i].name);
+               console.log(checkedValue);
+          }
+    }
+
+    console.log('genetic drift is checked', checkedValue.indexOf('geneticDrift') != -1 );
+    console.log('mutation is checked', checkedValue.indexOf('mutation') != -1 );
+
+    var hasGeneticDrift = checkedValue.indexOf('geneticDrift') != -1;
+    var hasMutation = checkedValue.indexOf('mutation') != -1;
+    createNextGen(hasGeneticDrift, hasMutation);
+}
+
+function createNextGen(hasGeneticDrift, hasMutation) {
+    var hasSpots;
     // next generation
     a1a1 = p * p;
     a1a2 = 2 * p * q;
     a2a2 = q * q;
 
     console.log('next gen', a1a1, a1a2, a2a2);
+
+    // if has finite population size, N, genetic drift sets in, have 2N alleles
+
+    // chance of a1a1 is chance of inheriting spots, which are recessive 
+    function inheritSpots() {
+        var chance = Math.random();
+        // ~16% chance inheriting spots
+        hasSpots = (chance < a1a1) ? true : false;
+    }
+
+    inheritSpots();
+    var babyBug = new Bug(200, 200, hasSpots);
+
+
 }
 
-createNextGen();
+// createNextGen();
 console.log('generation 1:', a1a1, a1a2, a2a2);
 
-// instantiate parent bugs
-// parent bugs are drawn onload screen
-// parent bugs are of class Bug
-// spots are the allele?
-function Bug(xPos, yPos) {
+// spots are the allele
+function Bug(xPos, yPos, hasSpots) {
     var bugColorsArr = [ "orchid", "goldenrod", "lightgrey", "thistle", "rosybrown", "mediumorchid", "darkkhaki", "greenyellow", "mediumvioletred","indianred", "peru", "chocolate", "palegreen", "tan", "darkgoldenrod", "palevioletred", "red", "lightcyan" ];
     var bugBack1 = bugColorsArr[Math.floor(bugColorsArr.length * Math.random())];
     var bugBack2 = bugColorsArr[Math.floor(bugColorsArr.length * Math.random())];
@@ -36,6 +68,8 @@ function Bug(xPos, yPos) {
     var bugHead = bugColorsArr[Math.floor(bugColorsArr.length * Math.random())];
     var bugButt = bugColorsArr[Math.floor(bugColorsArr.length * Math.random())];
     var canvas = document.getElementById('the_bugging_canvas');
+    this.hasSpots = hasSpots;
+
     if (canvas.getContext) {
         var ctx = canvas.getContext('2d');
 
@@ -48,8 +82,8 @@ function Bug(xPos, yPos) {
         // Fill with gradient
         ctx.strokeStyle = gradient;
         ctx.fillStyle = gradient;
-        ctx.strokeRect(xPos, yPos, 50, yPos-25);
-        ctx.fillRect(xPos, yPos, 50, yPos-25);
+        ctx.strokeRect(xPos, yPos, 50, 75);
+        ctx.fillRect(xPos, yPos, 50, 75);
 
         // HEAD
         ctx.fillStyle = bugHead;
@@ -73,22 +107,25 @@ function Bug(xPos, yPos) {
         ctx.arc(xPos + 25, yPos + 75, 25, 0, Math.PI, false);
         ctx.fill();
 
-        // SPOTS
-        ctx.fillStyle = bugAccent;
-        ctx.lineWidth = 2
-        ctx.beginPath();
-        ctx.moveTo(xPos + 20, yPos + 70);
-        ctx.arc(xPos + 15, yPos + 70, 5, 0, Math.PI * 2, true);
-        // ctx.moveTo(95, 65);
-        // ctx.arc(90, 65, 5, 0, Math.PI * 2, true);
-        ctx.fill();
+        if(this.hasSpots) {
+            // SPOTS
+            ctx.fillStyle = bugAccent;
+            ctx.lineWidth = 2
+            ctx.beginPath();
+            ctx.moveTo(xPos + 20, yPos + 70);
+            ctx.arc(xPos + 15, yPos + 50, 5, 0, Math.PI * 2, true);
+            ctx.moveTo(xPos + 40, yPos + 50);
+            ctx.arc(xPos + 30, yPos + 40, 5, 0, Math.PI * 2, true);
+            ctx.moveTo(xPos + 45, yPos + 60);
+            ctx.arc(xPos + 40, yPos + 60, 5, 0, Math.PI * 2, true);
+            ctx.fill();
+        }
     }
 }
 
 
 var makeParentBugs = function() {
-    var parentBug1 = new Bug(200, 100);
-    var parentBug2 = new Bug(500, 100);
-    // parentBug1;
+    var parentBug1 = new Bug(50, 100, true);
+    var parentBug2 = new Bug(350, 100, false);
 }
 
