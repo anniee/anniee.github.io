@@ -3,7 +3,7 @@
 }
 
 h1 {
-  font-family: 'Viga', monospace;
+  font-family: "Viga", monospace;
   font-size: 60px;
   margin-bottom: 0px;
   text-align: center;
@@ -16,7 +16,8 @@ h3 {
   font-family: monospace;
 }
 
-p, li {
+p,
+li {
   font-family: monospace;
   font-weight: 500;
   padding: 10px 40px;
@@ -50,7 +51,7 @@ button {
 button:hover {
   cursor: pointer;
   color: #000000;
-  background-color: #ece2c6 ;
+  background-color: #ece2c6;
   /* border: 5px solid #ecc6c6; */
 }
 
@@ -63,7 +64,6 @@ img {
   display: block;
   margin: 0 auto;
 }
-
 
 .portfolio-link-container {
   position: relative;
@@ -86,7 +86,8 @@ img {
   color: black;
 }
 
-.portfolio-link:hover, .portfolio-link:focus {
+.portfolio-link:hover,
+.portfolio-link:focus {
   color: #ece2c6;
   font-weight: bold;
   background-color: black;
@@ -105,27 +106,55 @@ img {
   background-color: #f9ecf2;
 }
 
+.ascii-garden {
+  display: flex;
+}
+.thistles {
+  color: red;
+}
+
 /* EVERY MODERN WEBSITE NEEDS AT LEAST ONE BUG */
 
 @keyframes cockroach {
-    0%   {left:400px; top:0px;}
-    25%  {left:200px; top:0px;}
-    50%  {left:200px; top:-200px;}
-    75%  {left:0px; top:0px;}
-    100% {left:400px; top:0px;}
+  0% {
+    left: 400px;
+    top: 0px;
+  }
+  25% {
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    left: 200px;
+    top: -200px;
+  }
+  75% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 400px;
+    top: 0px;
+  }
+}
+
+span#snail {
+  color: purple;
+  animation-name: cockroach;
+  animation-duration: 5s;
 }
 .cockroach {
-/*  position: absolute;
+  /*  position: absolute;
   width:100px;
   height: 100px;*/
 }
 .cockroach img {
-    width: 100px;
-    height: 100px;
-    left: 400px;
-    position: relative;
-    animation-name: cockroach;
-    animation-duration: 4s;
+  width: 100px;
+  height: 100px;
+  left: 400px;
+  position: relative;
+  animation-name: cockroach;
+  animation-duration: 4s;
 }
 
 /* PROJECTS */
@@ -144,7 +173,9 @@ img {
   width: 35%;
 }
 
-#maker-faire-kid, .the_bugging_img, #neural_net_code {
+#maker-faire-kid,
+.the_bugging_img,
+#neural_net_code {
   width: 35%;
   border-radius: 0;
 }
@@ -156,21 +187,21 @@ img {
 /* PUBLICATIONS */
 .paper-title a {
   text-decoration: none;
-  color: #000000
+  color: #000000;
 }
 
 .paper-title a:hover {
   text-decoration: underline;
 }
 
-#publications-info-paper1, 
+#publications-info-paper1,
 #publications-info-paper2,
 #publications-info-paper3 {
   display: none;
 }
 
 li:hover + #publications-info-paper1 {
-    display: block;
+  display: block;
 }
 
 li:hover + #publications-info-paper2 {
@@ -183,7 +214,7 @@ li:hover + #publications-info-paper3 {
 
 .paper-info {
   background-color: #000000;
-  color:#ece2c6;
+  color: #ece2c6;
   font-family: monospace;
 }
 
