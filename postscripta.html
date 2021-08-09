@@ -200,15 +200,11 @@
       }
 
       function logSubmit(event) {
-        // console log each letter typed
         event.preventDefault();
-
-        let handwrittenText = {};
-
-        console.log(scribeInput.value);
         scribeInputArr = scribeInput.value.split("");
         scribeInputArr.forEach((item) => {
           // create image to append to textContent
+          item.toLowerCase();
           let letterImg = document.createElement("img");
           // TODO punctuation
           if (item === " ") {
