@@ -11,11 +11,20 @@
         font-family: monospace;
       }
       button {
-        background-color: hotpink;
+        background-color: tan;
+        height: 120px;
+        width: 300px;
         padding: 20px;
         border-radius: 6px;
         font-size: 14px;
-        font-family: monospace;
+        font-family: "MedievalSharp", cursive;
+      }
+      button#pentimento:hover {
+        box-shadow: 0px 0px 100px 0px red;
+      }
+      button:hover {
+        box-shadow: 0px 0px 100px 0px rgba(255, 165, 0, 1);
+        cursor: pointer;
       }
       .buggingStats {
         font-family: monospace;
@@ -34,22 +43,139 @@
         margin: 10px;
       }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h2>postscripta</h2>
-    <!-- <input type="text" />
+    <h2
+      style="
+        font-family: 'MedievalSharp', cursive;
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 3px 4px tan;
+      "
+    >
+      postscripta
+    </h2>
+    <h5
+      style="
+        font-size: 18px;
+        font-family: 'MedievalSharp';
+        text-align: center;
+        font-style: italic;
+        color: black;
+        margin-bottom: 0px;
+      "
+    >
+      a scribing service for Dr. Thomas A. Vetto, M.D.
+    </h5>
+    <!-- <div
+      style="
+        height: 20px;
+        background-color: tan;
+        background-image: linear-gradient(
+            45deg,
+            black 25%,
+            transparent 25%,
+            transparent 75%,
+            black 75%,
+            black
+          ),
+          linear-gradient(
+            -45deg,
+            black 25%,
+            transparent 25%,
+            transparent 75%,
+            black 75%,
+            black
+          );
+        background-size: 20px 20px;
+      "
+    ></div> -->
+    <div
+      style="
+        height: 600px;
+        /* background-image: url(images/postscripta_imgs/medieval_Border.jpeg); */
+        background-image: url(images/postscripta_imgs/medieval_frame.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      "
+    >
+      <div
+        classname="text-container"
+        style="position: relative; top: 160px; left: 160px; max-width: 660px"
+      >
+        <div id="log" style="display: flex; flex-wrap: wrap"></div>
+      </div>
+    </div>
+
+    <div style="">
+      <!-- <input type="text" />
     <div class="buggingStats">
       <button onclick="makeTheNextGen()">scribe</button>
     </div> -->
-
-    <form id="form">
-      <label>Test field: <input type="text" /></label>
-      <br /><br />
-      <button type="submit">Submit form</button>
-    </form>
-    <p id="log"></p>
-
     <div>
+      <form id="form" style="display: flex; align-items: center; justify-content: center;">
+        <textarea
+          type="text"
+          id="toScribe"
+          placeholder="type here..."
+          style="
+            font-size: 20px;
+            width: 60%;
+            height: 200px;
+            padding: 20px;
+            border: 4px double red;
+            border-radius: 12px;
+            margin-bottom: 40px;
+          "
+        ></textarea></div>
+        <div classname="actions" style="display: flex; align-items: center; justify-content: center;">
+          <button
+            type="submit"
+            style="
+              margin: 0 20px;
+
+              padding-left: 224px;
+              color: red;
+              height: 160px;
+              text-align: left;
+              font-size: 30px;
+              width: 360px;
+              text-shadow: 1px 1px black;
+              background-position-x: right;
+              background-position-y: center;
+              background-image: url(images/postscripta_imgs/lil_dude.jpeg);
+            "
+          >
+            scribe
+          </button>
+          <button
+            id="pentimento"
+            onclick="resetText()"
+            style="
+              padding-left: 62px;
+              height: 120px;
+              width: 285px;
+              color: cornflowerblue;
+              text-shadow: 1px 1px black;
+              font-size: 20px;
+              background-size: cover;
+              background-image: url(images/postscripta_imgs/pentimento.jpeg);
+            "
+          >
+            Oops! Pentimento
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- <div>
       <img src="images/postscripta_imgs/hImg.png" /><img
         src="images/postscripta_imgs/eImg.png"
       />
@@ -64,15 +190,45 @@
       /><img src="images/postscripta_imgs/lImg.png" /><img
         src="images/postscripta_imgs/dImg.png"
       />
-    </div>
+    </div> -->
 
-    <script src="scripts/the_bugging.js"></script>
+    <!-- <script src="scripts/postscripta.js"></script> -->
     <script>
-      function logSubmit(event) {
-        log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
-        console.log("event", event);
-        event.preventDefault();
+      function resetText() {
+        log.innerHTML = "";
+        console.log("log inner html", log.innerHTML);
       }
+
+      function logSubmit(event) {
+        // console log each letter typed
+        event.preventDefault();
+
+        let handwrittenText = {};
+
+        console.log(scribeInput.value);
+        scribeInputArr = scribeInput.value.split("");
+        scribeInputArr.forEach((item) => {
+          // create image to append to textContent
+          let letterImg = document.createElement("img");
+          // TODO punctuation
+          if (item === " ") {
+            console.log("ITEM IS A SPACE");
+            let letterSpace = document.createElement("div");
+            letterSpace.setAttribute("style", "width: 20px; display: block");
+            log.appendChild(letterSpace);
+          } else {
+            letterImg.src = `./images/postscripta_imgs/${item}Img.png`;
+            log.appendChild(letterImg);
+            console.log("ITEM", item);
+          }
+        });
+
+        // log.textContent = `${scribeInput.value} Scribed on ${event.timeStamp}`;
+
+        console.log("event", event);
+      }
+
+      let scribeInput = document.getElementById("toScribe");
 
       const form = document.getElementById("form");
       const log = document.getElementById("log");

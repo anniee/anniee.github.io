@@ -15,7 +15,7 @@ h1 {
   font-weight: 400;
 }
 
-#anne-name {
+#anne-logo {
   font-family: "UnifrakturCook", cursive;
   color: cornsilk;
   width: 200px;
@@ -23,6 +23,11 @@ h1 {
   border-image: repeating-linear-gradient(45deg, cornsilk, plum, cornsilk 30px)
     60;
   padding: 20px;
+}
+
+.social-links {
+  display: flex;
+  list-style-type: none;
 }
 
 h3 {
@@ -50,7 +55,9 @@ li {
 }
 
 .navbar {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 button {
@@ -68,6 +75,33 @@ button:hover {
   color: #000000;
   background-color: #ece2c6;
   /* border: 5px solid #ecc6c6; */
+}
+
+#blob-1 {
+  display: block;
+  /* text-indent: -9999px; */
+  width: 100px;
+  height: 82px;
+  background: url(../images/blob2.svg);
+  background-size: 100px 82px;
+}
+
+#blob-2 {
+  display: block;
+  /* text-indent: -9999px; */
+  width: 100px;
+  height: 82px;
+  background: url(../images/blob1.svg);
+  background-size: 100px 82px;
+}
+
+#blob-3 {
+  display: block;
+  /* text-indent: -9999px; */
+  width: 100px;
+  height: 82px;
+  background: url(../images/blob3.svg);
+  background-size: 100px 82px;
 }
 
 #projects-title {
