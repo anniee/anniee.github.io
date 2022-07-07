@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>anne vetto</title>
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
     <navbar class="navbar">
-      <h1 id="anne-logo">Anne Vetto</h1>
-      <ul class="social-links">
-      <li><a href="/" id="blob-1">TEST</a></li>
-      <li><a href="/" id="blob-2">TEST</a></li>
-      <li><a href="/" id="blob-3">TEST</a></li>
+      <a href="/" style="text-decoration: none"><h1 id="anne-home-nav">anne.dev</h1></a>
+      <ul class="anne-nav-links">
+        <li><a href="/about" id="about">about</a></li>
+        <li><a href="/" id="work">projects</a></li>
     </ul>
   </navbar>
-    <div class="portfolio-link-container">
-      <img src="images/pinkfloppytransparent.png" alt="pink floppy disc">
+  <hero>
+    <div style="display: flex; padding: 20px">
+      <p class="hero" style="font-family: Viga">I'm Anne, a creative software developer with a background in neuroscience based in Los Angeles, CA.
+      </p>
+      <img src="static/mod_synth.jpg" alt="anne noodling eurorack" style="width: 30%"/>
+    </div>
+  </hero>
+    <div class="contact-link-container">
+      <img src="static/pinkfloppytransparent.png" alt="floppy disc">
       <div class="links-container">
-        <a href="projects.html" class="portfolio-link">projects</a>
+        <a href="https://github.com/anniee" target="_blank" rel="noopener noreferrer" class="media-link">Github</a>
+      <a href="https://www.linkedin.com/in/annepvetto/" target="_blank" rel="noopener noreferrer" class="media-link">Linkedin</a>
+      <a href="https://stackoverflow.com/users/5017346/annev" target="_blank" rel="noopener noreferrer" class="media-link">Stack Overflow</a>
+        <!-- <a href="projects.html" class="portfolio-link">projects</a>
         <a href="work.html" class="portfolio-link">past work</a>
         <a href="publications.html" class="portfolio-link">publications</a>
         <a href="exhibitions.html" class="portfolio-link">exhibitions</a>
         <a href="AnneVettoSEResume2018.pdf" target="_blank" rel="noopener noreferrer" class="portfolio-link">resume</a>
-        <a href="about.html" class="portfolio-link">about &hearts;</a>
+        <a href="about.html" class="portfolio-link">about &hearts;</a> -->
       </div>
     </div>
-    <div class="media-link-container">
-      <a href="https://github.com/anniee" target="_blank" rel="noopener noreferrer" class-"media-link">Github</a>
-      <a href="https://www.linkedin.com/in/annepvetto/" target="_blank" rel="noopener noreferrer" class-"media-link">Linkedin</a>
-      <a href="https://stackoverflow.com/users/5017346/annev" target="_blank" rel="noopener noreferrer" class-"media-link">Stack Overflow</a>
-    </div>
-    <!-- <div class="cockroach">
-      <a href="https://www.instagram.com/rosy_the_roach/" target="_blank" rel="noopener noreferrer" class="cockroach"><img src="images/bug.png" alt="cockroach"></a>
-    </div> -->
-    <div class="ascii-garden">
+    <!-- <div class="ascii-garden">
       <pre class="thistles">
             wWWWw               wWWWw       
       vVVVv (___) wWWWw         (___)  vVVVv
@@ -52,7 +53,7 @@
    | (  C\ \  \_.'')
   _\  `--' |,'   _/
  /__`.____.'__.-'
-</span></pre>
+</span></pre> -->
     </div>
     <script src="scripts/main.js"></script>
   </body>

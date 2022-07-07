@@ -1,6 +1,6 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #ffe0ff;
 }
 
 :focus {
@@ -114,7 +114,7 @@ img {
   margin: 0 auto;
 }
 
-.portfolio-link-container {
+.contact-link-container {
   position: relative;
   text-align: center;
 }

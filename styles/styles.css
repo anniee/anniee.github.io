@@ -1,0 +1,65 @@
+/* GLOBAL STYLES */
+body {
+  background-color: #000000;
+  color: #ffe0ff;
+}
+
+p,
+li a {
+  font-family: "UnifrakturCook", cursive;
+  font-size: 32px;
+  color: #00ff00;
+}
+
+a:hover {
+  color: cornsilk;
+}
+
+/* HEADER */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 40px 20px;
+}
+
+#anne-home-nav {
+  font-family: monospace;
+  color: #000000;
+  background-color: #00ff00;
+  text-decoration: none;
+}
+
+#anne-home-nav:hover {
+  color: #00ff00;
+  background-color: #000000;
+}
+
+.anne-nav-links {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  flex-grow: 0.25;
+  justify-content: space-around;
+}
+
+.hero {
+  font-size: 40px;
+  text-align: right;
+  padding: 40px;
+}
+
+.contact-link-container {
+  position: relative;
+  text-align: center;
+}
+
+.links-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 49%;
+  left: 44%;
+  font-family: monospace;
+  font-size: 18px;
+  text-align: end;
+}
