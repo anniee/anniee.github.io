@@ -19,7 +19,11 @@ a:hover {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  height: 200px;
   padding: 0 20px 40px 20px;
+  background-image: url('../static/bckgrndneuron.jpeg');
+  background-size: contain;
 }
 
 #anne-home-nav {
@@ -48,18 +52,18 @@ a:hover {
   padding: 40px;
 }
 
-.contact-link-container {
-  position: relative;
-  text-align: center;
+.contact-links {
+  display: flex;
+  align-items: center;
+}
+.contact-link {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 24px;
+  color:#ffe0ff;
+  padding: 0 20px;
 }
 
-.links-container {
-  position: absolute;
+.ascii-garden {
   display: flex;
-  flex-direction: column;
-  top: 49%;
-  left: 44%;
-  font-family: monospace;
-  font-size: 18px;
-  text-align: end;
+  justify-content: end;
 }
