@@ -8,7 +8,7 @@ p,
 li a {
   font-family: "UnifrakturCook", cursive;
   font-size: 32px;
-  color: #00ff00;
+  color: #fa9bf4;
 }
 
 a:hover {
@@ -29,7 +29,7 @@ a:hover {
 #anne-home-nav {
   font-family: monospace;
   color: #000000;
-  background-color: #00ff00;
+  background-color: #fa9bf4;
   text-decoration: none;
 }
 
@@ -59,11 +59,6 @@ a:hover {
 .contact-link {
   font-family:'Courier New', Courier, monospace;
   font-size: 24px;
-  color:#ffe0ff;
+  color:#fa9bf4;
   padding: 0 20px;
-}
-
-.ascii-garden {
-  display: flex;
-  justify-content: end;
 }
