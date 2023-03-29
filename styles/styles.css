@@ -1,3 +1,4 @@
+/* erlenmeyer flask icon courtesy of <href="https://www.flaticon.com/free-icons/chemistry" title="chemistry icons">Chemistry icons created by Freepik - Flaticon</a> */
 /* GLOBAL STYLES */
 body {
   background-color: #000000;
@@ -12,30 +13,30 @@ li a {
 }
 
 a:hover {
-  color: #ffe0ff;
+  color: #f3bff3;
 }
 
 /* HEADER */
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  /* height: 200px; */
+  align-items: center;
   padding: 0 20px 40px 20px;
-  /* background-image: url('../static/bckgrndneuron.jpeg'); */
   background-size: contain;
 }
 
 #anne-home-nav {
-  font-family: monospace;
-  color: #000000;
-  background-color: #ffe0ff;
+  font-family: 'UnifrakturCook', monospace;
+  font-size: 60px;
+  color: palegreen;
   text-decoration: none;
+  padding: 0 48px;
 }
 
 #anne-home-nav:hover {
-  color: #ffe0ff;
-  background-color: #000000;
+  color: #000;
+  text-shadow:#f3bff3 1px 0 10px;
+  /* background-color: #000000; */
 }
 
 .anne-nav-links {
@@ -46,19 +47,12 @@ a:hover {
   justify-content: space-around;
 }
 
+.navlink:hover {
+  cursor: pointer;
+}
+
 .hero {
   font-size: 40px;
   text-align: right;
   padding: 40px;
-}
-
-.contact-links {
-  display: flex;
-  align-items: center;
-}
-.contact-link {
-  font-family:'Courier New', Courier, monospace;
-  font-size: 24px;
-  color:#ffe0ff;
-  padding: 0 20px;
 }
