@@ -8,11 +8,11 @@ p,
 li a {
   font-family: "UnifrakturCook", cursive;
   font-size: 32px;
-  color: #fa9bf4;
+  color: #ffe0ff;
 }
 
 a:hover {
-  color: cornsilk;
+  color: #ffe0ff;
 }
 
 /* HEADER */
@@ -29,12 +29,12 @@ a:hover {
 #anne-home-nav {
   font-family: monospace;
   color: #000000;
-  background-color: #fa9bf4;
+  background-color: #ffe0ff;
   text-decoration: none;
 }
 
 #anne-home-nav:hover {
-  color: #00ff00;
+  color: #ffe0ff;
   background-color: #000000;
 }
 
@@ -59,6 +59,6 @@ a:hover {
 .contact-link {
   font-family:'Courier New', Courier, monospace;
   font-size: 24px;
-  color:#fa9bf4;
+  color:#ffe0ff;
   padding: 0 20px;
 }
