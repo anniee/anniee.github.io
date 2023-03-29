@@ -21,21 +21,19 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px 40px 20px;
-  background-size: contain;
 }
 
 #anne-home-nav {
   font-family: 'UnifrakturCook', monospace;
   font-size: 60px;
-  color: palegreen;
+  color: #fff;
   text-decoration: none;
   padding: 0 48px;
 }
 
 #anne-home-nav:hover {
   color: #000;
-  text-shadow:#f3bff3 1px 0 10px;
+  text-shadow: white 1px 0 10px;
   /* background-color: #000000; */
 }
 
@@ -53,6 +51,5 @@ a:hover {
 
 .hero {
   font-size: 40px;
-  text-align: right;
   padding: 40px;
 }
