@@ -26,14 +26,14 @@ a:hover {
 #anne-home-nav {
   font-family: 'UnifrakturCook', monospace;
   font-size: 60px;
-  color: #fff;
+  color: lavender;
   text-decoration: none;
   padding: 0 48px;
 }
 
 #anne-home-nav:hover {
   color: #000;
-  text-shadow: white 1px 0 10px;
+  text-shadow: lavender 1px 0 10px;
   /* background-color: #000000; */
 }
 
