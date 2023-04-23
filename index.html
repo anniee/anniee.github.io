@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <title>anne.dev</title>
     <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-  </head>
-  <body>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400&family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">  
+</head>
+  <div>
     <navbar class="navbar">
-      <a href="/" style="text-decoration: none"><h1 id="anne-home-nav">anne.dev</h1></a>
+      <a href="/" style="text-decoration: none"><h1 id="anne-home-nav">ANNE VETTO</h1></a>
       <ul class="anne-nav-links">
         <li>
           <a href="https://www.researchgate.net/profile/Anne-Vetto" target="_blank" rel="noopener noreferrer">
@@ -29,43 +31,47 @@
         </li>
       </ul>
     </navbar>
+    <hr />
+
   <hero>
     <div style="display: flex; justify-content: space-around; padding: 20px">
-      <p class="hero" style="font-family: 'Courier New', Courier, monospace; color:lavender">hello world, I'm Anne, a creative software engineer with a background in neuroscience based in Los Angeles, CA.
+      <p class="hero" style="font-family: 'IBM Plex Mono'; font-weight: 200; color:lavender">hello world, I'm Anne, a creative software engineer with a background in neuroscience based in Los Angeles, CA.
       </p>
     </div>
   </hero>
-  <div style="display:flex; justify-content: space-around; align-items: center; margin: 0 10% 10% 10%; padding-bottom: 10%;;
+  <div style="display: flex; flex-direction: row; justify-content: space-around;">
+  <div style="display:flex; flex-direction: column;
   ">
     <video height="300" controls>
       <source src="static/the_bugging_2019.mp4" type="video/mp4">
     </video>
-    <div style="font-family: 'UnifrakturCook';
-    font-size: 120px;
+    <div style="font-family: 'IBM Plex Mono';
+    font-weight: 200;
+    font-size: 40px;
+    text-align: center;
     color: lavender;
-    text-shadow: 2px 2px 3px #ffe0ff;
-    flex-grow: 2;
-    text-align: right;">projects</div>
+    text-decoration: none;
+    "><a href="/projects.html" style="text-decoration: none">PROJECTS</a></div>
   </div>
-  <div style="display:flex; justify-content: space-around; align-items: center; margin: 0 10% 10% 10%; padding-bottom: 10%;
+  <div style="display:flex; flex-direction: column;
   ">
     <img src="static/bitzbots_figurines_pale.png" alt="3D printed robots" style="height:300px"/>
-    <div style="font-family: 'UnifrakturCook';
-    font-size: 120px;
+    <div style="font-family: 'IBM Plex Mono';
+    font-weight: 200;
+    font-size: 40px;
+    text-align: center;
     color: lavender;
-    text-shadow: 2px 2px 3px #f3bff3;
-    flex-grow: 2;
-    text-align: right;">exhibitions</div>
+    ">EXHIBITS</div>
   </div>
-  <div style="display:flex; justify-content: space-around;align-items: center; margin: 0 10% 10% 10%; padding-bottom: 10%;">
+  <div style="display:flex; flex-direction: column;">
       <img src="static/nmj.png" alt="innervated gastroc NMJ" style="height: 300px; box-shadow: 1px 1px 4px white" />
-      <div style="font-family: 'UnifrakturCook';font-size: 120px;
+      <div style="font-family: 'IBM Plex Mono'; font-weight: 200; font-size: 40px;
+          text-align: center;
       color: lavender;
-      text-shadow: 2px 2px 3px red;
-      flex-grow: 2;
-      text-align: right;">research</div>
+      ">RESEARCH</div>
     </div>
   </div>
+</div>
     <script src="scripts/main.js"></script>
   </body>
 </html>

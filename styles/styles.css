@@ -13,7 +13,11 @@ li a {
 }
 
 a:hover {
-  color: #f3bff3;
+  background-color: blue;
+}
+
+a:visited {
+  color:aliceblue
 }
 
 /* HEADER */
@@ -24,16 +28,16 @@ a:hover {
 }
 
 #anne-home-nav {
-  font-family: 'UnifrakturCook', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 60px;
+  font-weight: 200;
   color: lavender;
   text-decoration: none;
   padding: 0 48px;
 }
 
 #anne-home-nav:hover {
-  color: #000;
-  text-shadow: lavender 1px 0 10px;
+  color: #f3bff3;
   /* background-color: #000000; */
 }
 
