@@ -7,13 +7,14 @@ body {
 
 p,
 li a {
-  font-family: "UnifrakturCook", cursive;
+  font-family: monospace;
   font-size: 32px;
-  color: #ffe0ff;
+  /* color: #ffe0ff; */
+  color: lavender;
 }
 
 a:hover {
-  background-color: blue;
+  /* background-color: floralwhite; */
 }
 
 a:visited {
@@ -42,10 +43,11 @@ a:visited {
 }
 
 .anne-nav-links {
+  font-family: monospace;
   display: flex;
   list-style-type: none;
   align-items: center;
-  flex-grow: 0.25;
+  flex-grow: 1;
   justify-content: space-around;
 }
 

@@ -209,8 +209,8 @@ span#snail {
 /* PROJECTS */
 #projects-list {
   padding-left: 20%;
-  font-weight: 500;
-  font-family: monospace;
+  font-weight: 200;
+  font-family: 'IBM Plex Mono';
   list-style-type: none;
 }
 

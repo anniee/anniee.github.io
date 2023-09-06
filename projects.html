@@ -7,11 +7,13 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400&family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">  
+
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
     <navbar class="navbar">
-      <a href="/" style="text-decoration: none"><h1 id="anne-home-nav">anne.dev</h1></a>
+      <a href="/" style="text-decoration: none"><h1 id="anne-home-nav">ANNE.DEV</h1></a>
       <ul class="anne-nav-links">
         <li>
           <a href="https://www.researchgate.net/profile/Anne-Vetto" target="_blank" rel="noopener noreferrer">
@@ -31,10 +33,10 @@
       </ul>
     </navbar>
     <div class="header">
-      <h1 id="projects-title" style="font-family: monospace">projects</h1>
+      <h1 id="projects-title" style="font-family: 'IBM Plex Mono'; font-weight:200">projects</h1>
     </div>
     <ul id="projects-list">
-      Passion
+      <h2 style="font-family:'IBM Plex Mono'; font-size: 24px; font-weight: 200">Passion</h2>
       <li><button onclick="toggleProject('project-info--bitzbots')">Bit-z-Bots</button></li>
       <div id="project-info--bitzbots" style="display:none;">
         <img src="static/bitzbots_figurines.png" alt="BitzBots figurines">
@@ -174,6 +176,7 @@
       </div> -->
       <!-- Professional TBC -->
     </ul>
+    <h2 style="font-family:'IBM Plex Mono'; font-size: 24px; font-weight: 200">Professional</h2>
     <script>
       function toggleProject(id) {
         var project = document.getElementById(id);
