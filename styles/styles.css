@@ -1,16 +1,17 @@
 /* erlenmeyer flask icon courtesy of <href="https://www.flaticon.com/free-icons/chemistry" title="chemistry icons">Chemistry icons created by Freepik - Flaticon</a> */
 /* GLOBAL STYLES */
 body {
-  background-color: #000000;
-  color: #ffe0ff;
+  background-color: beige;
+  color: #000000;
 }
 
 p,
 li a {
-  font-family: monospace;
+  font-family: 'IBM Plex Mono';
   font-size: 32px;
+  font-weight: 200;
   /* color: #ffe0ff; */
-  color: lavender;
+  color: #000000;
 }
 
 a:hover {
@@ -30,15 +31,15 @@ a:visited {
 
 #anne-home-nav {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 60px;
+  font-size: 36px;
   font-weight: 200;
-  color: lavender;
+  color: #000000;
   text-decoration: none;
   padding: 0 48px;
 }
 
 #anne-home-nav:hover {
-  color: #f3bff3;
+  background-color: #f3bff3;
   /* background-color: #000000; */
 }
 
@@ -55,7 +56,24 @@ a:visited {
   cursor: pointer;
 }
 
+#projects-nav:hover {
+  background-color: lavender;
+}
+
+#exhibits-nav:hover {
+  background-color: lavender;
+}
+
+#about-nav:hover {
+  background-color: lime;
+}
+
 .hero {
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 40px;
   padding: 40px;
+  color: #000000;
+  text-align: end; 
+  font-weight: 200;
+  
 }

@@ -13,8 +13,8 @@
   </head>
   <body>
     <navbar class="navbar">
-      <a href="/" style="text-decoration: none"><h1 id="anne-home-nav">ANNE.DEV</h1></a>
-      <ul class="anne-nav-links">
+      <a href="/" style="text-decoration: none;"><h1 id="anne-home-nav">anne.dev</h1></a>
+      <!-- <ul class="anne-nav-links">
         <li>
           <a href="https://www.researchgate.net/profile/Anne-Vetto" target="_blank" rel="noopener noreferrer">
           <img src="static/flask.png" alt="erlenmeyer flask" style="height: 60px;"/> 
@@ -30,13 +30,13 @@
           <img src="static/In-White-48.png" alt="LinkedIn logo"/> 
           </a>
         </li>
-      </ul>
+      </ul> -->
     </navbar>
     <div class="header">
       <h1 id="projects-title" style="font-family: 'IBM Plex Mono'; font-weight:200">projects</h1>
     </div>
     <ul id="projects-list">
-      <h2 style="font-family:'IBM Plex Mono'; font-size: 24px; font-weight: 200">Passion</h2>
+      <h2 style="font-family:'IBM Plex Mono'; text-align: left; font-size: 30px; font-weight: 200">passion</h2>
       <li><button onclick="toggleProject('project-info--bitzbots')">Bit-z-Bots</button></li>
       <div id="project-info--bitzbots" style="display:none;">
         <img src="static/bitzbots_figurines.png" alt="BitzBots figurines">
@@ -176,7 +176,9 @@
       </div> -->
       <!-- Professional TBC -->
     </ul>
-    <h2 style="font-family:'IBM Plex Mono'; font-size: 24px; font-weight: 200">Professional</h2>
+    <ul id="projects-list">
+      <h2 style="font-family:'IBM Plex Mono'; text-align: left; font-size: 30px; font-weight: 200">professional</h2>
+    </ul>
     <script>
       function toggleProject(id) {
         var project = document.getElementById(id);

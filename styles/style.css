@@ -1,6 +1,7 @@
 body {
-  background-color: #000000;
-  color: #ffe0ff;
+  background-color: beige;
+  /* color: #ffe0ff; */
+  color: #000000;
 }
 
 :focus {
@@ -16,8 +17,8 @@ h1 {
 }
 
 #anne-logo {
-  font-family: monospace;
-  color: cornsilk;
+  font-family: 'IBM Plex Mono';
+  color: black;
   width: 200px;
   border: 30px solid;
   border-image: repeating-linear-gradient(45deg, cornsilk, plum, cornsilk 30px)
