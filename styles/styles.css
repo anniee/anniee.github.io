@@ -1,18 +1,32 @@
 /* erlenmeyer flask icon courtesy of <href="https://www.flaticon.com/free-icons/chemistry" title="chemistry icons">Chemistry icons created by Freepik - Flaticon</a> */
 /* GLOBAL STYLES */
+@font-face {
+  font-family: 'Savio';
+  src: url('../static/fonts/savio-webfont.woff') format('woff');
+}
+
 body {
   background-color: beige;
   color: #000000;
 }
 
-p,
-li a {
+h1 {
+  font-family: 'Savio';
+  font-size: 10em;
+}
+
+p {
+  font-family: 'Savio';
+  font-size: 4em;
+}
+
+/* li a {
   font-family: 'IBM Plex Mono';
   font-size: 32px;
-  font-weight: 200;
+  font-weight: 200; */
   /* color: #ffe0ff; */
-  color: #000000;
-}
+  /* color: #000000; */
+
 
 a:hover {
   /* background-color: floralwhite; */
@@ -45,7 +59,7 @@ a:visited {
 
 .anne-nav-links {
   font-family: monospace;
-  display: flex;
+  /* display: flex; */
   list-style-type: none;
   align-items: center;
   flex-grow: 1;
@@ -69,7 +83,7 @@ a:visited {
 }
 
 .hero {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Savio';
   font-size: 40px;
   padding: 40px;
   color: #000000;
