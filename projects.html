@@ -33,10 +33,13 @@
       </ul> -->
     </navbar>
     <div class="header">
-      <h1 id="projects-title" style="font-family: 'IBM Plex Mono'; font-weight:200">projects</h1>
+      <h1 id="projects-title" style="font-family: 'Savio'; font-size: 6em">projects</h1>
     </div>
+    <div style="display: flex; flex-direction:column">
+      <h2 style="font-family:'IBM Plex Mono'; text-align: left; font-size: 4em; font-weight: 200; margin-bottom: 0">passion</h2>
+      <hr />
     <ul id="projects-list">
-      <h2 style="font-family:'IBM Plex Mono'; text-align: left; font-size: 30px; font-weight: 200">passion</h2>
+
       <li><button onclick="toggleProject('project-info--bitzbots')">Bit-z-Bots</button></li>
       <div id="project-info--bitzbots" style="display:none;">
         <img src="static/bitzbots_figurines.png" alt="BitzBots figurines">
@@ -68,20 +71,25 @@
       </div>
       <li><button onclick="toggleProject('project-info--thebugging')">the_bugging</button></li>
       <div id="project-info--thebugging" style="display:none;">
-        <img src="static/sitemigbugging1.png" class="the_bugging_img" alt="digital bugs">
-          <video height="300" controls>
-            <source src="static/the_bugging_2019.mp4" type="video/mp4">
-          </video>
+        <!-- <img src="static/sitemigbugging1.png" class="the_bugging_img" alt="digital bugs"> -->
+
         <div class="project-info">
-            Programmers spend enough time debugging. The Bugging is a playful exercise for the programmer to practice and solidify her 
+            <div style="margin-bottom: 2em">Programmers spend enough time debugging.</div>
+    
+            “the bugging” is a Javascript program to generate mutated bugs with accurate inheritance simulation using Mendelian genetics and the Hardy-Weinberg Principle.
+            <video height="300" controls>
+              <source src="static/the_bugging_2019.mp4" type="video/mp4">
+            </video>
+            The Bugging began as a playful exercise for the programmer to practice and solidify her 
             knowledge in object-oriented programming (OOP) while creating colorful "bugs". The Bugging involves algorithmically generating 
             bugs with randomly selected, inheritable attributes (e.g. wing/eye color, pattern, body detail, number of legs) and methods 
-            (e.g. movement, size growth). The project will eventually implement Mendelian genetics principles in algorithms to dictate 
-            offsprings' inheritance of said bug qualities.
+            (e.g. movement, size growth).
         </div>
-        <img src="static/sitmigbugging3.gif" class="the_bugging_img" alt="digital bug generation">
+        <img height="100px" src="static/albi.png" />
+        <div>The resulting phenotype of the offspring bug was also translated into a crochet pattern; this cutie has albinism</div>
         <div class="project-info">
-            The original The Bugging playfully employs Python's Turtle module, which is traditionally used to teach OOP, by imagining 
+          <img src="static/sitmigbugging3.gif" class="the_bugging_img" alt="digital bug generation">
+            The original The Bugging playfully employed Python's Turtle module, which was traditionally used to teach OOP, by imagining 
             a digital turtle has attributes of position, direction and shape, and methods of movement. It drags its tail (which is 
             dipped in colorful paint) across the computer screen, to the programmer's (or program's) whim.
         </div>
@@ -92,10 +100,10 @@
             randomized, algorithmically generated art that--if not screencast---lasts in ephemerality, mimicking the often short 
             lifespans of insects.
         </div>
-        <img src="static/sitemigbugging5.png" class="the_bugging_img" style="width:20%;display:inline-block;" alt="digital scarab">
-        <img src="static/sitemigbugging6.png" class="the_bugging_img" style="width:20%;display:inline-block;" alt="digital scarab">
-        <img src="static/sitemigbugging8.png" class="the_bugging_img" style="width:20%;display:inline-block;" alt="digital scarabs">
-        <img src="static/sitemigbugging2.png" class="the_bugging_img" style="width:20%;display:inline-block;" alt="digital bee">
+        <!-- <img src="static/sitemigbugging5.png" class="the_bugging_img" style="width:20%;display:inline-block;" alt="digital scarab"> -->
+        <!-- <img src="static/sitemigbugging6.png" class="the_bugging_img" style="width:20%;display:inline-block;" alt="digital scarab"> -->
+        <!-- <img src="static/sitemigbugging8.png" class="the_bugging_img" style="width:20%;display:inline-block;" alt="digital scarabs"> -->
+        <!-- <img src="static/sitemigbugging2.png" class="the_bugging_img" style="width:20%;display:inline-block;" alt="digital bee"> -->
       </div>
       <li><button onclick="toggleProject('project-info--angelena')">Angelena Atlas</button></li>
       <div id="project-info--angelena" style="display:none;">
@@ -181,8 +189,10 @@
       <!-- Professional TBC -->
     </ul>
     <ul id="projects-list">
-      <h2 style="font-family:'IBM Plex Mono'; text-align: left; font-size: 30px; font-weight: 200">professional</h2>
+      <h2 style="font-family:'IBM Plex Mono'; text-align: left; font-size: 4em; font-weight: 200; margin-bottom: 0">professional</h2>
+      <hr />
     </ul>
+  </div>
     <script>
       function toggleProject(id) {
         var project = document.getElementById(id);

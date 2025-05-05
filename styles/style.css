@@ -115,7 +115,7 @@ button:hover {
 }
 
 img {
-  border-radius: 200px;
+  /* border-radius: 200px; */
   display: block;
   margin: 0 auto;
 }
@@ -214,14 +214,24 @@ span#snail {
 
 /* PROJECTS */
 #projects-list {
-  padding-left: 20%;
+  display: flex;
+  flex-direction: row;
   font-weight: 200;
   font-family: 'IBM Plex Mono';
+  font-size: 20px;
   list-style-type: none;
 }
 
 .project-info {
-  margin: 20px 60px 20px 0;
+  /* margin: 20px 60px 20px 0; */
+  display: flex;
+  flex-direction: column;
+}
+
+
+.project-info--thebugging {
+  display: flex;
+  flex-direction: column;
 }
 
 #angelena-atlas {
