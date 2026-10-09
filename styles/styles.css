@@ -6,8 +6,10 @@
 }
 
 body {
-  background-color: beige;
-  color: #000000;
+  /* background-color: beige; */
+  /* background-color: #dee292; */
+  color: #f7e5f5;
+  background-color: #000000;
 }
 
 h1 {
@@ -15,6 +17,9 @@ h1 {
   font-size: 10em;
 }
 
+h3 {
+  font-family: 'Savio'; font-size: 4em;
+}
 p {
   font-family: 'Savio';
   font-size: 4em;
@@ -36,7 +41,52 @@ a:visited {
   color:aliceblue
 }
 
+/* PAGE LAYOUT */
+.page-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+
+.parent-div {
+  /* position: relative; */
+  /* your other styles, e.g., height, width, background */
+  background-image: linear-gradient(to bottom, #f7e5f5, rgb(247, 229, 245, 0.98), rgba(247, 229, 245, 0));
+
+}
+
+
+
+/* .parent-div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%; /* covers the bottom half */
+  /* background: rgba(0, 0, 0, 0.5);  */
+  /* black background with 50% opacity */
+  /* pointer-events: none;  */
+  /* allows clicks to pass through if needed */
+/* } */ */
+
+.sticky-side-name {
+  position: -webkit-sticky; /* Support for Safari */
+  position: sticky;
+  transform: rotate(90deg);
+  top: 6rem; /* The distance from the top of the viewport when it sticks */
+  padding-left: 15%;
+  translate: 50%;
+  width: 37%;
+}
+
+.content {
+  flex: 1;
+}
 /* HEADER */
+
 .navbar {
   display: flex;
   justify-content: space-between;

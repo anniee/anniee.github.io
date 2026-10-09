@@ -303,3 +303,12 @@ li:hover + #publications-info-paper3 {
 /*li:hover + #project-info--bitzbots {
     display: block;
 }*/
+
+
+@media (width <= 1250px) {
+  /* … */
+}
+
+@media (1250px >= width) {
+  /* … */
+}
