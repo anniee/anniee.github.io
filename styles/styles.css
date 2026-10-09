@@ -6,10 +6,10 @@
 }
 
 body {
-  /* background-color: beige; */
+  background-color: beige;
   /* background-color: #dee292; */
-  color: #f7e5f5;
-  background-color: #000000;
+  /* color: #f7e5f5; */
+  /* background-color: #000000; */
 }
 
 h1 {
@@ -52,8 +52,9 @@ a:visited {
 
 .parent-div {
   /* position: relative; */
+  /* f7e5f5 */
   /* your other styles, e.g., height, width, background */
-  background-image: linear-gradient(to bottom, #f7e5f5, rgb(247, 229, 245, 0.98), rgba(247, 229, 245, 0));
+  background-image: linear-gradient(to bottom, #9e9e9e, rgb(247, 229, 245, 0.98), rgba(247, 229, 245, 0));
 
 }
 
